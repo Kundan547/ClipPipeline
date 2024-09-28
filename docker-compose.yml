@@ -1,0 +1,22 @@
+version: '3'
+services:
+  frontend:
+    build:
+      context: ./Frontend
+    ports:
+      - "80:80"
+    networks:
+      - video-net
+
+  backend:
+    build:
+      context: ./backend
+    ports:
+      - "8000:8000"
+    networks:
+      - video-net
+
+networks:
+  video-net:
+    driver: bridge
+

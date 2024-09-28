@@ -1,0 +1,39 @@
+name: CI/CD Pipeline
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Docker
+        uses: docker/setup-buildx-action@v2
+
+      - name: Build the Backend Docker Image
+        run: |
+          docker build -t video-editor-backend:latest ./backend
+      
+      - name: Build the Frontend Docker Image
+        run: |
+          docker build -t video-editor-frontend:latest ./frontend
+      
+      - name: Deploy to EC2
+        env:
+          HOST: ${{ secrets.EC2_HOST }}
+          USERNAME: ${{ secrets.EC2_USERNAME }}
+          PRIVATE_KEY: ${{ secrets.EC2_PRIVATE_KEY }}
+        run: |
+          scp -i $PRIVATE_KEY docker-compose.yml $USERNAME@$HOST:/home/$USERNAME/
+          ssh -i $PRIVATE_KEY $USERNAME@$HOST "
+            cd /home/$USERNAME/
+            docker-compose down
+            docker-compose up --build -d
+          "
+
