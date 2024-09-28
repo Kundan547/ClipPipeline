@@ -1,16 +1,27 @@
 # ClipPipeline
+<<<<<<< HEAD
+=======
 
+>>>>>>> origin/main
 ClipPipeline is a web-based video editor that simplifies trimming and editing. Built with FastAPI and FFmpeg, it allows users to easily upload and manipulate video clips. Ideal for content creators and educators, ClipPipeline offers fast and reliable editing solutions with an intuitive interface.
 
 ## Overview
 
+<<<<<<< HEAD
+**ClipPipeline** is a web-based video editor that allows users to upload and trim video clips effortlessly. It provides a simple yet powerful interface for editing videos using FastAPI and FFmpeg.
+=======
 ClipPipeline is a web-based video editor that allows users to upload and trim video clips effortlessly. It provides a simple yet powerful interface for editing videos using FastAPI and FFmpeg.
+>>>>>>> origin/main
 
 ## Features
 
 - **Upload Videos**: Easily upload your video files for editing.
 - **Trim Videos**: Specify start and end times to cut video segments.
+<<<<<<< HEAD
+- **User-Friendly Interface**: Designed with an intuitive frontend for smooth user experience.
+=======
 - **User-Friendly Interface**: Designed with an intuitive frontend for a smooth user experience.
+>>>>>>> origin/main
 - **Fast Processing**: Efficient backend processing using FastAPI and FFmpeg.
 - **Multi-Format Support**: Works with various video formats for maximum flexibility.
 
@@ -31,6 +42,19 @@ ClipPipeline is a web-based video editor that allows users to upload and trim vi
 - Docker Compose
 
 ### Clone the Repository
+<<<<<<< HEAD
+
+```bash
+git clone https://github.com/your-username/ClipPipeline.git
+cd ClipPipeline
+
+### Setup and Run
+    Build the Docker containers:
+    docker-compose up --build
+    Access the application at http://localhost:80 for the frontend or http://localhost:8000/docs for the API documentation.
+
+
+=======
 git clone https://github.com/kundan547/ClipPipeline.git
 cd ClipPipeline
 
@@ -54,3 +78,4 @@ Thanks to the creators of FastAPI and FFmpeg for their amazing tools.
 ### Notes
 - Ensure to replace the link in the "License" section with the actual license file if you include one.
 - You can add additional sections like "Usage" or "Screenshots" if you want to elab
+>>>>>>> origin/main

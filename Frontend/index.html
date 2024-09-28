@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Editor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Video Editor Tool</h1>
+        <h2>Upload Video</h2>
+        <input type="file" id="video-upload" accept="video/*">
+        <button onclick="uploadVideo()">Upload</button>
+        <p id="upload-status"></p>
+
+        <h2>Trim Video</h2>
+        <input type="text" id="start-time" placeholder="Start time (in seconds)">
+        <input type="text" id="end-time" placeholder="End time (in seconds)">
+        <button onclick="trimVideo()">Trim Video</button>
+        <p id="trim-status"></p>
+
+        <h2>Preview Video</h2>
+        <video id="video-preview" width="600" controls></video>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
+
