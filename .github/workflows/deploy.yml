@@ -22,7 +22,7 @@ jobs:
       
       - name: Build the Frontend Docker Image
         run: |
-          docker build -t video-editor-frontend:latest ./frontend
+          docker build -t video-editor-frontend:latest ./Frontend
       
       - name: Deploy to EC2
         env:
